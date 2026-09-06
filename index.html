@@ -13,7 +13,7 @@
 
 <!-- Floating nav -->
 <nav class="nav">
-  <a href="#" class="nav__name">Kaknika</a>
+  <a href="#" class="nav__name">Kaknika Chea</a>
   <ul class="nav__links">
     <li><a href="#build">Build</a></li>
     <li><a href="#" data-nav="lead">Lead</a></li>
@@ -31,20 +31,33 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero__words" id="heroWords">
-      <span class="hero__word" data-word>Build</span>
-      <span class="hero__word" data-word>Lead</span>
-      <span class="hero__word" data-word>Learn</span>
-      <span class="hero__word" data-word>Create</span>
+    <div class="hero__text">
+      <div class="hero__words" id="heroWords">
+        <span class="hero__word" data-word style="--d:0">Build</span>
+        <span class="hero__word" data-word style="--d:1">Lead</span>
+        <span class="hero__word" data-word style="--d:2">Learn</span>
+        <span class="hero__word" data-word style="--d:3">Create</span>
+      </div>
+      <p class="hero__thesis">Always building. <em>Always learning.</em></p>
     </div>
-    <p class="hero__thesis">Always building. <em>Always learning.</em></p>
+    <div class="hero__photo">
+      <img src="assets/profile.jpg" alt="Kaknika Chea" onerror="this.remove(); this.parentElement.classList.add('hero__photo--empty')">
+    </div>
   </section>
 
   <!-- Marquee divider -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee__track">
-      <span>Build&nbsp;·&nbsp;Lead&nbsp;·&nbsp;Learn&nbsp;·&nbsp;Create&nbsp;·&nbsp;</span>
-      <span>Build&nbsp;·&nbsp;Lead&nbsp;·&nbsp;Learn&nbsp;·&nbsp;Create&nbsp;·&nbsp;</span>
+      <div class="marquee__group">
+        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
+        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
+        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
+      </div>
+      <div class="marquee__group">
+        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
+        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
+        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
+      </div>
     </div>
   </div>
 

@@ -31,16 +31,19 @@ if (!prefersReducedMotion && heroWords.length) {
       const cx = rect.left + rect.width / 2;
       const cy = rect.top + rect.height / 2;
       const dist = Math.hypot(mouseX - cx, mouseY - cy);
-      const maxDist = 260;
-      const proximity = Math.max(0, 1 - dist / maxDist);
+      const maxDist = 180;
+      // steeper falloff = snaps to full effect sooner, feels more "defined" than gradual
+      const proximity = Math.max(0, Math.min(1, 1 - dist / maxDist));
+      const eased = proximity * proximity; // ease-in, sharper response near the word
 
       const green = getComputedStyle(html).getPropertyValue('--green').trim();
-      word.style.textShadow = proximity > 0
-        ? `0 0 ${18 * proximity}px ${green}`
+      word.style.textShadow = eased > 0
+        ? `0 0 ${10 * eased}px ${green}, 0 0 ${26 * eased}px ${green}`
         : 'none';
-      word.style.color = proximity > 0
-        ? `color-mix(in srgb, ${green} ${proximity * 70}%, var(--text))`
+      word.style.color = eased > 0
+        ? `color-mix(in srgb, ${green} ${Math.min(eased * 100, 100)}%, var(--text))`
         : 'var(--text)';
+      word.style.fontVariationSettings = `'wght' ${700 + eased * 100}`;
     });
     ticking = false;
   }
