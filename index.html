@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaknika Chea — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@1&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Floating nav -->
+<nav class="nav">
+  <a href="#" class="nav__name">Kaknika</a>
+  <ul class="nav__links">
+    <li><a href="#build">Build</a></li>
+    <li><a href="#" data-nav="lead">Lead</a></li>
+    <li><a href="#" data-nav="learn">Learn</a></li>
+    <li><a href="#" data-nav="create">Create</a></li>
+    <li><a href="#" data-nav="contact">Contact</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+    <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+    <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.3A8.3 8.3 0 1 1 9.7 4a6.7 6.7 0 0 0 10.3 10.3Z"/></svg>
+  </button>
+</nav>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__words" id="heroWords">
+      <span class="hero__word" data-word>Build</span>
+      <span class="hero__word" data-word>Lead</span>
+      <span class="hero__word" data-word>Learn</span>
+      <span class="hero__word" data-word>Create</span>
+    </div>
+    <p class="hero__thesis">Always building. <em>Always learning.</em></p>
+  </section>
+
+  <!-- Marquee divider -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Build&nbsp;·&nbsp;Lead&nbsp;·&nbsp;Learn&nbsp;·&nbsp;Create&nbsp;·&nbsp;</span>
+      <span>Build&nbsp;·&nbsp;Lead&nbsp;·&nbsp;Learn&nbsp;·&nbsp;Create&nbsp;·&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- Micro intro -->
+  <section class="intro">
+    <p>Hi, I'm Kaknika. Chronically busy and still figuring out where all of this is headed. But somewhere in between all this chaos, I like to build things, run more than I probably should, and quietly rethink what <em>"success"</em> means to me as I go.</p>
+  </section>
+
+  <!-- In the Meantime -->
+  <section class="meantime">
+    <div class="meantime__head">
+      <h2>In the Meantime</h2>
+      <p class="meantime__sub">Here's what I've been up to</p>
+    </div>
+    <ul class="meantime__list">
+      <li>Writing college essays about myself, which is somehow harder than any of my AP exams</li>
+      <li>Half-training for a new 10K and 21K personal best, half-negotiating with my body about it</li>
+      <li>Running free weekly tech classes to bring our elderly community back into the loop with the rest of us</li>
+      <li>Helping plan our school's annual STEM Week, which currently lives entirely in a group chat</li>
+    </ul>
+  </section>
+
+  <!-- Stat strip -->
+  <section class="stats">
+    <div class="stat">
+      <span class="stat__number" data-count="11">0</span>
+      <span class="stat__label">AP courses</span>
+    </div>
+    <div class="stat">
+      <span class="stat__number" data-count="10">0</span>
+      <span class="stat__label">race podium finishes</span>
+    </div>
+    <div class="stat">
+      <span class="stat__number" data-count="7">0</span>
+      <span class="stat__label">MUN conferences</span>
+    </div>
+    <div class="stat">
+      <span class="stat__number" data-count="4">0</span>
+      <span class="stat__label">years on Student Council</span>
+    </div>
+  </section>
+
+  <!-- Featured projects -->
+  <section class="projects" id="build">
+    <h2 class="section-label">What I'm building</h2>
+    <div class="projects__grid">
+
+      <article class="project-card">
+        <div class="project-card__top">
+          <span class="badge badge--dev">In Development</span>
+        </div>
+        <h3>Focus Quest</h3>
+        <p>A gamified study-planning app that helps students actually stick to a schedule — built with FlutterFlow, Firebase, and AI-assisted scheduling.</p>
+        <a href="#" class="card-link">See the full story <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__top">
+          <span class="badge badge--test">Tested</span>
+        </div>
+        <h3>KiriShield</h3>
+        <p>A Telegram bot that helps elderly Cambodians spot scam messages and AI-generated content before they fall for them.</p>
+        <a href="#" class="card-link">See the full story <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__top">
+          <span class="badge badge--shipped">Shipped</span>
+        </div>
+        <h3>Twenty1 Studio</h3>
+        <p>A small business selling squishies for kids — branding, social media, and a shopping site, built from the ground up.</p>
+        <a href="#" class="card-link">See the full story <span aria-hidden="true">→</span></a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Leadership teaser -->
+  <section class="lead-teaser">
+    <p>Four years on Student Council, one direction: <em>forward.</em></p>
+    <a href="#" class="text-link">See the timeline <span aria-hidden="true">→</span></a>
+  </section>
+
+  <!-- CTA / closing -->
+  <section class="cta">
+    <p>Somewhere out there is a version of me running a company before her morning run is even done. For now — I'm just getting started.</p>
+    <div class="cta__links">
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">TikTok</a>
+      <a href="#">Resume</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Kaknika Chea — built with more coffee than I'd like to admit.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
