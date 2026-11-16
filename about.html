@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Kaknika Chea</title>
+<meta name="description" content="About Kaknika (Amy) Chea, a high school senior in Cambodia hoping to study Software Engineering.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About — Kaknika Chea">
+<meta property="og:description" content="Who I am and where I am going.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@1&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Floating nav (same on every page) ===== -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__name">Kaknika Chea</a>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="beyond.html">Beyond</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav__actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+      <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.3A8.3 8.3 0 1 1 9.7 4a6.7 6.7 0 0 0 10.3 10.3Z"/></svg>
+    </button>
+    <button class="nav__menu" id="navMenu" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+  </div>
+</nav>
+
+<main>
+
+  <header class="page-head">
+    <span class="pillar">About</span>
+    <h1 class="reveal">I'm Kaknika. Most people call me <em>Amy.</em></h1>
+    <ul class="facts reveal" style="--i:1">
+      <li>Cambodian</li>
+      <li>CIA First International School since 2012</li>
+      <li>Class of 2027</li>
+      <li>Hoping to study Software Engineering</li>
+    </ul>
+  </header>
+
+  <!-- DRAFT: check this sounds like you and rewrite anything that doesn't -->
+  <section class="story">
+    <div>
+      <span class="pillar">How I got here</span>
+      <h2 class="reveal">Changing direction is <em>allowed.</em></h2>
+    </div>
+    <div class="story__body reveal">
+      <p>For a long time I was going to be a doctor. Then I did a two-week internship at Kantha Bopha, and somewhere in those two weeks I realized I wasn't as keen on it as I'd thought.</p>
+      <p>That was a strange thing to admit after saying it out loud for years. I decided to treat it as a lesson: go and look for another path, and get to know myself a bit better on the way.</p>
+      <p>High school has mostly been that. I try things, I notice how they feel, and when something feels wrong I change direction. That's how I ended up here, wanting to study Software Engineering.</p>
+      <p class="muted">If I had to pick one strength, it's adaptability.</p>
+    </div>
+  </section>
+
+  <!-- DRAFT -->
+  <section class="vision">
+    <span class="pillar">Five years from now</span>
+    <p class="reveal">A morning run, the gym, a matcha, a healthy breakfast, then off to <em>my own tech company,</em> building things that help the people around me and make a real difference in my community. And, honestly, making a living from them too.</p>
+  </section>
+
+  <section>
+    <span class="pillar">Toolkit</span>
+    <h2 class="section-label reveal">What I work with</h2>
+    <div class="toolkit">
+      <div class="reveal" style="--i:0"><h3>Development</h3><ul><li>FlutterFlow</li><li>Firebase</li><li>Visual Studio Code</li><li>GitHub</li></ul></div>
+      <div class="reveal" style="--i:1"><h3>Programming</h3><ul><li>Python</li><li>HTML / CSS</li><li>JavaScript</li></ul></div>
+      <div class="reveal" style="--i:2"><h3>AI</h3><ul><li>AI-assisted development</li><li>Prompt engineering</li><li>Gemini / API integration</li></ul></div>
+      <div class="reveal" style="--i:3"><h3>Design</h3><ul><li>Figma</li><li>UI / UX</li><li>Canva</li></ul></div>
+      <div class="reveal" style="--i:4"><h3>Media</h3><ul><li>CapCut</li><li>Video editing</li><li>Content creation</li></ul></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="cta" id="contact">
+    <h2 class="reveal">Say <em>hi.</em></h2>
+    <div class="cta__links">
+      <!-- TODO: replace with your real email and links -->
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">TikTok</a>
+      <a href="#">Resume</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Kaknika Chea — built with more coffee than I'd like to admit.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

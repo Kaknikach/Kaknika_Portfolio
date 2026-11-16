@@ -4,6 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kaknika Chea — Portfolio</title>
+<meta name="description" content="Kaknika Chea: a student builder from Cambodia. Projects, leadership, and what I'm learning along the way.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kaknika Chea — Portfolio">
+<meta property="og:description" content="Build. Lead. Learn. Create. Projects, leadership, and what I'm learning along the way.">
+<meta property="og:url" content="https://kaknikach.github.io/Kaknika_Portfolio/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>
+  // Pick the theme before the page draws: your saved choice, else your device setting.
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@1&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -11,54 +27,58 @@
 </head>
 <body>
 
-<!-- Floating nav -->
-<nav class="nav">
-  <a href="#" class="nav__name">Kaknika Chea</a>
-  <ul class="nav__links">
-    <li><a href="#build">Build</a></li>
-    <li><a href="#" data-nav="lead">Lead</a></li>
-    <li><a href="#" data-nav="learn">Learn</a></li>
-    <li><a href="#" data-nav="create">Create</a></li>
-    <li><a href="#" data-nav="contact">Contact</a></li>
+<!-- ===== Floating nav (same on every page) ===== -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__name">Kaknika Chea</a>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="beyond.html">Beyond</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
-    <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
-    <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.3A8.3 8.3 0 1 1 9.7 4a6.7 6.7 0 0 0 10.3 10.3Z"/></svg>
-  </button>
+  <div class="nav__actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+      <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.3A8.3 8.3 0 1 1 9.7 4a6.7 6.7 0 0 0 10.3 10.3Z"/></svg>
+    </button>
+    <button class="nav__menu" id="navMenu" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+  </div>
 </nav>
 
 <main>
-
   <!-- Hero -->
   <section class="hero">
     <div class="hero__text">
-      <div class="hero__words" id="heroWords">
+      <h1 class="hero__words" id="heroWords">
         <span class="hero__word" data-word style="--d:0">Build</span>
         <span class="hero__word" data-word style="--d:1">Lead</span>
         <span class="hero__word" data-word style="--d:2">Learn</span>
         <span class="hero__word" data-word style="--d:3">Create</span>
-      </div>
+      </h1>
       <p class="hero__thesis">Always building. <em>Always learning.</em></p>
     </div>
     <div class="hero__photo">
-      <img src="assets/profile.jpg" alt="Kaknika Chea" onerror="this.remove(); this.parentElement.classList.add('hero__photo--empty')">
+      <!-- Put your photo at assets/profile.jpg and it shows up here -->
+      <img src="assets/profile.jpg" alt="Kaknika Chea">
     </div>
   </section>
 
-  <!-- Marquee divider -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <div class="marquee__group">
-        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
-        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
-        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
-      </div>
-      <div class="marquee__group">
-        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
-        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
-        <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
-      </div>
+  <!-- Marquee: "bleed" makes it run edge to edge of the window -->
+  <div class="marquee bleed" aria-hidden="true">
+  <div class="marquee__track">
+    <div class="marquee__group">
+      <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
+      <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
+      <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
     </div>
+    <div class="marquee__group">
+      <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
+      <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
+      <span>Build</span><span>·</span><span>Lead</span><span>·</span><span>Learn</span><span>·</span><span>Create</span><span>·</span>
+    </div>
+  </div>
   </div>
 
   <!-- Micro intro -->
@@ -101,50 +121,71 @@
   </section>
 
   <!-- Featured projects -->
-  <section class="projects" id="build">
+  <section class="projects">
+    <span class="pillar">Build</span>
     <h2 class="section-label reveal">What I'm building</h2>
     <div class="projects__grid">
 
       <article class="project-card reveal" style="--i:0">
-        <div class="project-card__top">
-          <span class="badge badge--dev">In Development</span>
-        </div>
+        <span class="badge badge--dev">In Development</span>
         <h3>Focus Quest</h3>
         <p>A gamified study-planning app that helps students actually stick to a schedule — built with FlutterFlow, Firebase, and AI-assisted scheduling.</p>
-        <a href="#" class="card-link">See the full story <span aria-hidden="true">→</span></a>
+        <a href="projects.html#focus-quest" class="card-link">See the full story <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="project-card reveal" style="--i:1">
-        <div class="project-card__top">
-          <span class="badge badge--test">Tested</span>
-        </div>
+        <span class="badge badge--test">Tested</span>
         <h3>KiriShield</h3>
         <p>A Telegram bot that helps elderly Cambodians spot scam messages and AI-generated content before they fall for them.</p>
-        <a href="#" class="card-link">See the full story <span aria-hidden="true">→</span></a>
+        <a href="projects.html#kirishield" class="card-link">See the full story <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="project-card reveal" style="--i:2">
-        <div class="project-card__top">
-          <span class="badge badge--shipped">Shipped</span>
-        </div>
+        <span class="badge badge--shipped">Shipped</span>
         <h3>Twenty1 Studio</h3>
         <p>A small business selling squishies for kids — branding, social media, and a shopping site, built from the ground up.</p>
-        <a href="#" class="card-link">See the full story <span aria-hidden="true">→</span></a>
+        <a href="projects.html#twenty1-studio" class="card-link">See the full story <span aria-hidden="true">→</span></a>
       </article>
 
     </div>
   </section>
 
-  <!-- Leadership teaser -->
-  <section class="lead-teaser">
-    <p class="reveal">Four years on Student Council, one direction: <em>forward.</em></p>
-    <a href="#" class="text-link">See the timeline <span aria-hidden="true">→</span></a>
+  <!-- Leadership: compact timeline, fades in left to right -->
+  <section class="lead-mini">
+    <div class="lead-mini__head">
+      <span class="pillar">Lead</span>
+      <h2 class="reveal">Four years on Student Council, one direction: <em>forward.</em></h2>
+    </div>
+    <ol class="tl-mini">
+      <li class="tl-mini__stage reveal-x" style="--i:0; --w:1">
+        <span class="tl-mini__grade">G8</span>
+        <p class="tl-mini__role">Middle School President</p>
+        <span class="tl-mini__years">2022–23</span>
+      </li>
+      <li class="tl-mini__stage reveal-x" style="--i:1; --w:2">
+        <span class="tl-mini__grade">G10</span>
+        <p class="tl-mini__role">High School Treasurer &amp; Mentor</p>
+        <span class="tl-mini__years">2024–25</span>
+      </li>
+      <li class="tl-mini__stage reveal-x" style="--i:2; --w:3">
+        <span class="tl-mini__grade">G11</span>
+        <p class="tl-mini__role">High School Vice President</p>
+        <span class="tl-mini__years">2025–26</span>
+      </li>
+      <li class="tl-mini__stage reveal-x" style="--i:3; --w:4">
+        <span class="tl-mini__grade">G12</span>
+        <p class="tl-mini__role">Student Council President</p>
+        <span class="tl-mini__years">2026–27 · now</span>
+      </li>
+    </ol>
+    <a href="leadership.html" class="text-link">See the full story <span aria-hidden="true">→</span></a>
   </section>
 
   <!-- CTA / closing -->
-  <section class="cta">
+  <section class="cta" id="contact">
     <p class="reveal">Somewhere out there is a version of me running a company before her morning run is even done. For now — I'm just getting started.</p>
     <div class="cta__links">
+      <!-- TODO: replace with your real email and links -->
       <a href="mailto:youremail@example.com">Email</a>
       <a href="#">GitHub</a>
       <a href="#">LinkedIn</a>
@@ -152,7 +193,6 @@
       <a href="#">Resume</a>
     </div>
   </section>
-
 </main>
 
 <footer class="footer">

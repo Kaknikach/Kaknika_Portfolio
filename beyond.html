@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond the Classroom — Kaknika Chea</title>
+<meta name="description" content="Running, content creation and community service.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Beyond the Classroom — Kaknika Chea">
+<meta property="og:description" content="Running, making things, and giving back.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@1&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Floating nav (same on every page) ===== -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__name">Kaknika Chea</a>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="beyond.html">Beyond</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav__actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+      <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.3A8.3 8.3 0 1 1 9.7 4a6.7 6.7 0 0 0 10.3 10.3Z"/></svg>
+    </button>
+    <button class="nav__menu" id="navMenu" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+  </div>
+</nav>
+
+<main>
+
+  <header class="page-head">
+    <span class="pillar">Create</span>
+    <h1 class="reveal">Running, making things, and <em>giving back.</em></h1>
+    <p class="page-head__lede reveal" style="--i:1">The parts of my life that don't fit on a transcript but probably taught me the most.</p>
+  </header>
+
+  <!-- Running -->
+  <section class="feature">
+    <div>
+      <span class="pillar">Athletics</span>
+      <h2 class="reveal">I run more than I probably should.</h2>
+      <p class="feature__role">Cambodian National Youth Running Team · 2025</p>
+      <div class="feature__body reveal">
+        <p>In 2025 I qualified for the Cambodian National Youth Running Team. Right now I'm training for a new 10K and 21K personal best.</p>
+        <p>Running has taught me discipline, consistency and mental endurance, mostly by making me show up on the days I didn't want to.</p>
+        <p class="todo">A line or two in your own words: what does running give you?</p>
+      </div>
+    </div>
+    <figure class="media reveal" data-label="assets/beyond/running.jpg">
+      <img src="assets/beyond/running.jpg" alt="Kaknika racing">
+    </figure>
+  </section>
+
+  <section>
+    <span class="pillar">Recent races</span>
+    <h2 class="section-label reveal">A few results</h2>
+    <ul class="races reveal">
+      <li class="race"><span class="race__year">2026</span><span>Phnom Penh International Aquathlon</span><span class="race__place">Top 3 age cat.</span></li>
+      <li class="race"><span class="race__year">2026</span><span>Susu Phnom Penh City Run 5K</span><span class="race__place">Top 4 women</span></li>
+      <li class="race"><span class="race__year">2025</span><span>Romdoul Charity Run 8K</span><span class="race__place">Top 5 women</span></li>
+      <li class="race"><span class="race__year">2024</span><span>Susu Stride to Inspire 10K</span><span class="race__place">1st age cat.</span></li>
+      <li class="race"><span class="race__year">2024</span><span>NISC Cross Country 4K</span><span class="race__place">1st age cat.</span></li>
+    </ul>
+    <p style="margin-top:24px"><a class="text-link" href="achievements.html#athletics">All results <span aria-hidden="true">→</span></a></p>
+
+    <h3 class="reveal" style="margin:72px 0 20px; font-size:1.2rem">CIA Eagles</h3>
+    <ul class="cols">
+      <li class="reveal" style="--i:0"><h3>Swimming</h3><p>2023–2025</p></li>
+      <li class="reveal" style="--i:1"><h3>Basketball &amp; Badminton</h3><p>2024–2025</p></li>
+      <li class="reveal" style="--i:2"><h3>Track &amp; Field</h3><p>2023–2024 · Top 2 in my age category</p></li>
+    </ul>
+  </section>
+
+  <!-- Content creation -->
+  <section class="feature">
+    <figure class="media reveal" data-label="assets/beyond/content.jpg">
+      <img src="assets/beyond/content.jpg" alt="Behind the scenes of a TikTok video">
+    </figure>
+    <div>
+      <span class="pillar">Content</span>
+      <h2 class="reveal">Documenting it all.</h2>
+      <p class="feature__role">TikTok · CapCut · Canva</p>
+      <div class="feature__body reveal">
+        <p>I make TikToks about student life, productivity, personal growth and the occasional productive day-in-my-life. I like documenting things as they happen and sharing them.</p>
+        <p>I also create and manage TikTok and Facebook content for my uncle's durian business.</p>
+        <p class="todo">Add a link to your TikTok, or name a favourite video.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serve -->
+  <section>
+    <span class="pillar">Serve</span>
+    <h2 class="section-label reveal">Giving back</h2>
+    <ol class="serve">
+      <li class="reveal" style="--i:0"><span class="serve__num">01</span><div><h3>Books and supplies for Kampong Cham</h3><p>Profits from the Voices of Insight championship went to books and school supplies for 200+ students.</p></div></li>
+      <li class="reveal" style="--i:1"><span class="serve__num">02</span><div><h3>Fundraising for the border conflict</h3><p>Student Council fundraising to support people affected by the Cambodia–Thailand border conflict.</p></div></li>
+      <li class="reveal" style="--i:2"><span class="serve__num">03</span><div><h3>Gifts for kids at CCF</h3><p>A collaboration with Interact Club to donate gifts to children at CCF.</p></div></li>
+      <li class="reveal" style="--i:3"><span class="serve__num">04</span><div><h3>Free weekly tech classes</h3><p>Through TechFoundation, we run free classes to bring our elderly community back into the loop. <a class="text-link" href="projects.html#techfoundation">The story <span aria-hidden="true">→</span></a></p></div></li>
+    </ol>
+  </section>
+
+  <!-- Contact -->
+  <section class="cta" id="contact">
+    <h2 class="reveal">Say <em>hi.</em></h2>
+    <div class="cta__links">
+      <!-- TODO: replace with your real email and links -->
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">TikTok</a>
+      <a href="#">Resume</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Kaknika Chea — built with more coffee than I'd like to admit.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

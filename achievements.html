@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievements — Kaknika Chea</title>
+<meta name="description" content="Kaknika Chea's academics, STEM competitions, Model UN, debate, internships and athletics.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Achievements — Kaknika Chea">
+<meta property="og:description" content="Academics, competitions, MUN and the moments that changed how I think.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@1&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Floating nav (same on every page) ===== -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__name">Kaknika Chea</a>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="beyond.html">Beyond</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav__actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+      <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.3A8.3 8.3 0 1 1 9.7 4a6.7 6.7 0 0 0 10.3 10.3Z"/></svg>
+    </button>
+    <button class="nav__menu" id="navMenu" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+  </div>
+</nav>
+
+<main>
+
+  <header class="page-head">
+    <span class="pillar">Learn</span>
+    <h1 class="reveal">Challenging myself, <em>on purpose.</em></h1>
+    <p class="page-head__lede reveal" style="--i:1">Academics, STEM competitions, Model UN and debate, and the experiences that changed how I see things.</p>
+  </header>
+
+  <!-- AP courses: count and courses only, never scores -->
+  <section class="ap">
+    <div class="reveal">
+      <span class="pillar">Academics</span>
+      <div class="ap__count" data-count="11">11</div>
+      <p class="mono" style="margin-top:12px">AP courses, Grades 10–12</p>
+    </div>
+    <div class="ap__years">
+      <div class="reveal" style="--i:0">
+        <h3>Grade 10</h3>
+        <ul><li>AP Precalculus</li><li>AP Environmental Science</li><li>AP Seminar</li><li>AP Microeconomics</li></ul>
+      </div>
+      <div class="reveal" style="--i:1">
+        <h3>Grade 11</h3>
+        <ul><li>AP Calculus AB</li><li>AP Research</li><li>AP Computer Science A</li><li>AP Physics</li></ul>
+      </div>
+      <div class="reveal" style="--i:2">
+        <h3>Grade 12 <span class="badge badge--dev">In progress</span></h3>
+        <ul><li>AP Macroeconomics</li><li>AP Business and Personal Finance</li><li>AP Calculus BC</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bigger moments -->
+  <section>
+    <span class="pillar">Experience</span>
+    <h2 class="section-label reveal">Moments that changed how I think</h2>
+    <div class="moments">
+      <article class="moment moment--big reveal">
+        <span class="moment__when">2026 · Singapore</span>
+        <div>
+          <h3>YaleMUN Singapore</h3>
+          <p>Debating real global issues and conflicts with students from all over the world, and working through possible solutions together. It was practice in diplomacy and negotiation, and in hearing perspectives very different from mine. I came home much more aware of how connected everything is.</p>
+        </div>
+      </article>
+      <article class="moment reveal">
+        <span class="moment__when">2025 · 2 weeks</span>
+        <div>
+          <h3>Kantha Bopha Hospital internship</h3>
+          <p>A two-week internship at a Cambodian public hospital. It taught me a lot about responsibility and teamwork, and it's also where I realized medicine wasn't the path for me. <a class="text-link" href="about.html">More on that <span aria-hidden="true">→</span></a></p>
+        </div>
+      </article>
+      <article class="moment reveal">
+        <span class="moment__when">2023 · 2 months</span>
+        <div>
+          <h3>Private hospital summer internship</h3>
+          <p>Two months in a professional environment, building communication, empathy and teamwork.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Filterable awards.
+       To add one: copy an <li class="award">, set data-cat to
+       academic / stem / global / athletics, and add data-highlight
+       if it should show in the default "Highlights" view. -->
+  <section id="awards" style="scroll-margin-top:90px">
+    <span class="pillar">Awards &amp; competitions</span>
+    <h2 class="section-label reveal">The highlights, and everything else</h2>
+
+    <div class="filters" role="group" aria-label="Filter achievements">
+      <button class="chip" data-filter="highlights" aria-pressed="true">Highlights</button>
+      <button class="chip" data-filter="academic" aria-pressed="false">Academic</button>
+      <button class="chip" data-filter="stem" aria-pressed="false">STEM</button>
+      <button class="chip" data-filter="global" aria-pressed="false">Global</button>
+      <button class="chip" data-filter="athletics" aria-pressed="false">Athletics</button>
+      <button class="chip" data-filter="all" aria-pressed="false">All</button>
+    </div>
+    <p class="mono" id="awardCount" style="margin-bottom:16px" aria-live="polite"></p>
+
+    <ul class="awards">
+      <!-- Academic -->
+      <li class="award" data-cat="academic" data-highlight><span class="award__year">G9 &amp; G10</span><span class="award__title">Academic Achiever Award<small>Highest cumulative GPA in my grade level, both years</small></span><span class="award__cat">Academic</span></li>
+      <li class="award" data-cat="academic" data-highlight><span class="award__year">G9</span><span class="award__title">Khmer Physics Outstanding Student<small>Top 1 at CIA First</small></span><span class="award__cat">Academic</span></li>
+      <li class="award" data-cat="academic"><span class="award__year">—</span><span class="award__title">English &amp; Khmer SLO awards<small>Around 20 across both programs</small></span><span class="award__cat">Academic</span></li>
+      <li class="award" data-cat="academic"><span class="award__year">—</span><span class="award__title">Teeneagle<small>Bronze</small></span><span class="award__cat">Academic</span></li>
+
+      <!-- STEM -->
+      <li class="award" data-cat="stem" data-highlight><span class="award__year">—</span><span class="award__title">Copernicus Physics &amp; Astronomy Olympiad<small>Silver · Global Round Qualifier</small></span><span class="award__cat">STEM</span></li>
+      <li class="award" data-cat="stem"><span class="award__year">—</span><span class="award__title">SIMSO<small>Bronze · Global Round Qualifier</small></span><span class="award__cat">STEM</span></li>
+      <li class="award" data-cat="stem"><span class="award__year">—</span><span class="award__title">Math Kangaroo<small>Silver</small></span><span class="award__cat">STEM</span></li>
+      <li class="award" data-cat="stem"><span class="award__year">2026</span><span class="award__title">STEAM 3D Pen Competition<small>Top 3</small></span><span class="award__cat">STEM</span></li>
+      <li class="award" data-cat="stem"><span class="award__year">2026</span><span class="award__title">STEM Cambodia<small>Participant</small></span><span class="award__cat">STEM</span></li>
+
+      <!-- Global: MUN, debate, WSC -->
+      <li class="award" data-cat="global" data-highlight><span class="award__year">2026</span><span class="award__title">YaleMUN Singapore<small>Delegate</small></span><span class="award__cat">Global</span></li>
+      <li class="award" data-cat="global" data-highlight><span class="award__year">2023–25</span><span class="award__title">7 Model UN conferences<small>6× Delegate, 1× Chair · Best Delegate · multiple Honorable Mentions</small></span><span class="award__cat">Global</span></li>
+      <li class="award" data-cat="global" data-highlight><span class="award__year">2025</span><span class="award__title">World Scholar's Cup<small>Top 10 · Global Round Qualifier</small></span><span class="award__cat">Global</span></li>
+      <li class="award" data-cat="global"><span class="award__year">2024</span><span class="award__title">EXPODebate</span><span class="award__cat">Global</span></li>
+      <li class="award" data-cat="global"><span class="award__year">2024</span><span class="award__title">Voice of the Youth<small>Debate</small></span><span class="award__cat">Global</span></li>
+      <li class="award" data-cat="global"><span class="award__year">2023</span><span class="award__title">Cambodian Debate League</span><span class="award__cat">Global</span></li>
+
+      <!-- Athletics -->
+      <li class="award" data-cat="athletics" data-highlight><span class="award__year">2025</span><span class="award__title">Cambodian National Youth Running Team<small>Qualified</small></span><span class="award__cat">Athletics</span></li>
+      <li class="award" data-cat="athletics" data-highlight><span class="award__year">2026</span><span class="award__title">Phnom Penh International Aquathlon<small>Top 3, age category (Top 4 in 2025)</small></span><span class="award__cat">Athletics</span></li>
+      <li class="award" data-cat="athletics"><span class="award__year">2026</span><span class="award__title">Susu Phnom Penh City Run 5K<small>Top 4 women</small></span><span class="award__cat">Athletics</span></li>
+      <li class="award" data-cat="athletics"><span class="award__year">—</span><span class="award__title">Phnom Penh City Run Part 2 (10K)<small>10th place</small></span><span class="award__cat">Athletics</span></li>
+      <li class="award" data-cat="athletics"><span class="award__year">2025</span><span class="award__title">Women's Run 10K<small>Top 10 women</small></span><span class="award__cat">Athletics</span></li>
+      <li class="award" data-cat="athletics"><span class="award__year">2025</span><span class="award__title">Romdoul Charity Run 8K<small>Top 5 women</small></span><span class="award__cat">Athletics</span></li>
+      <li class="award" data-cat="athletics" data-highlight><span class="award__year">2024</span><span class="award__title">Susu Stride to Inspire 10K<small>Top 1 age category · Top 8 women</small></span><span class="award__cat">Athletics</span></li>
+      <li class="award" data-cat="athletics"><span class="award__year">2024</span><span class="award__title">NISC Cross Country 4K<small>Top 1 age category</small></span><span class="award__cat">Athletics</span></li>
+      <li class="award" data-cat="athletics"><span class="award__year">2024</span><span class="award__title">Sprint for Spin Fun Run 5K<small>Top 7 women</small></span><span class="award__cat">Athletics</span></li>
+      <li class="award" data-cat="athletics"><span class="award__year">2024</span><span class="award__title">Phnom Penh International Half Marathon (10K)<small>Top 24 women</small></span><span class="award__cat">Athletics</span></li>
+      <li class="award" data-cat="athletics"><span class="award__year">—</span><span class="award__title">Amret Fun Run 5K<small>Top 4 women</small></span><span class="award__cat">Athletics</span></li>
+      <li class="award" data-cat="athletics"><span class="award__year">2023–24</span><span class="award__title">CIA Eagles Track &amp; Field<small>Top 2, age category</small></span><span class="award__cat">Athletics</span></li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="cta" id="contact">
+    <h2 class="reveal">Say <em>hi.</em></h2>
+    <div class="cta__links">
+      <!-- TODO: replace with your real email and links -->
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">TikTok</a>
+      <a href="#">Resume</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Kaknika Chea — built with more coffee than I'd like to admit.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

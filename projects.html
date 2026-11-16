@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Kaknika Chea</title>
+<meta name="description" content="What Kaknika Chea has built: Focus Quest, KiriShield, Twenty1 Studio, TechFoundation and the STUCO Opportunity Platform, with the story behind each.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects — Kaknika Chea">
+<meta property="og:description" content="What I've built, why I built it, and what I learned.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@1&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Floating nav (same on every page) ===== -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__name">Kaknika Chea</a>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="beyond.html">Beyond</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav__actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+      <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.3A8.3 8.3 0 1 1 9.7 4a6.7 6.7 0 0 0 10.3 10.3Z"/></svg>
+    </button>
+    <button class="nav__menu" id="navMenu" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+  </div>
+</nav>
+
+<main>
+
+  <header class="page-head">
+    <span class="pillar">Build</span>
+    <h1 class="reveal">Things I've built, and the <em>why</em> behind them.</h1>
+    <p class="page-head__lede reveal" style="--i:1">Some of these are finished, some are tested, and some are still very much in progress. Each one starts with a problem I noticed.</p>
+  </header>
+
+  <!-- Project index -->
+  <section style="padding-top:0">
+    <nav class="pindex" aria-label="Projects">
+      <a class="pindex__row reveal" href="#focus-quest">
+        <span class="pindex__num">01</span>
+        <span class="pindex__name">Focus Quest</span>
+        <span class="pindex__hook">Gamified study planner with AI scheduling</span>
+        <span class="badge badge--dev">In Development</span>
+        <span class="pindex__arrow" aria-hidden="true">↓</span>
+      </a>
+      <a class="pindex__row reveal" href="#kirishield">
+        <span class="pindex__num">02</span>
+        <span class="pindex__name">KiriShield</span>
+        <span class="pindex__hook">Scam-detection Telegram bot for elderly Cambodians</span>
+        <span class="badge badge--test">Tested</span>
+        <span class="pindex__arrow" aria-hidden="true">↓</span>
+      </a>
+      <a class="pindex__row reveal" href="#twenty1-studio">
+        <span class="pindex__num">03</span>
+        <span class="pindex__name">Twenty1 Studio</span>
+        <span class="pindex__hook">A small online business selling squishies for kids</span>
+        <span class="badge badge--shipped">Shipped</span>
+        <span class="pindex__arrow" aria-hidden="true">↓</span>
+      </a>
+      <a class="pindex__row reveal" href="#techfoundation">
+        <span class="pindex__num">04</span>
+        <span class="pindex__name">TechFoundation</span>
+        <span class="pindex__hook">Free weekly tech classes for our elderly community</span>
+        <span class="badge badge--ongoing">Ongoing</span>
+        <span class="pindex__arrow" aria-hidden="true">↓</span>
+      </a>
+      <a class="pindex__row reveal" href="#stuco-platform">
+        <span class="pindex__num">05</span>
+        <span class="pindex__name">STUCO Opportunity Platform</span>
+        <span class="pindex__hook">One place for school events and opportunities</span>
+        <span class="badge badge--concept">Concept</span>
+        <span class="pindex__arrow" aria-hidden="true">↓</span>
+      </a>
+    </nav>
+  </section>
+
+  <!-- =====================================================
+       CASE STUDIES
+       Template: Problem → Idea → Design → Development →
+       Challenges → What I learned → What's next
+       Pink dashed boxes (class="todo") are for you to write.
+       ===================================================== -->
+
+  <!-- 01 Focus Quest -->
+  <section class="case" id="focus-quest">
+    <header class="case__head">
+      <div class="case__meta"><span class="case__num">01</span><span class="badge badge--dev">In Development</span></div>
+      <h2 class="reveal">Focus Quest</h2>
+      <p class="case__hook reveal">A gamified study-planning app that helps students organize their workload and build consistent study habits.</p>
+      <ul class="tags"><li>FlutterFlow</li><li>Firebase</li><li>AI-assisted development</li></ul>
+    </header>
+
+    <figure class="media reveal" data-label="assets/projects/focus-quest.jpg">
+      <img src="assets/projects/focus-quest.jpg" alt="Focus Quest app screens">
+    </figure>
+
+    <dl class="steps">
+      <div class="step reveal"><dt><span>01</span>Problem</dt>
+        <dd><p>Students juggle exams, assignments and activities, and it's hard to turn all of that into a plan you actually stick to.</p>
+        <p class="todo">Why did this problem matter to you? Was it something you dealt with yourself?</p></dd></div>
+      <div class="step reveal"><dt><span>02</span>Idea</dt>
+        <dd><p>A study planner that feels like a game. XP, badges and achievements reward consistency, and AI tailors each schedule to the person using it.</p></dd></div>
+      <div class="step reveal"><dt><span>03</span>Design</dt>
+        <dd><p>The app is built around a few core pieces:</p>
+        <ul><li>Student onboarding and a profile (name, birthday, education level)</li><li>Upcoming exams and exam input</li><li>Availability, so the plan fits around real life</li><li>Automated study scheduling</li><li>A study timer and reminders</li><li>XP, badges and achievements</li></ul>
+        <p class="todo">Any sketches, Figma screens or design decisions you want to show?</p></dd></div>
+      <div class="step reveal"><dt><span>04</span>Development</dt>
+        <dd><p>Built in FlutterFlow with Firebase behind it, using AI-assisted development throughout.</p>
+        <p class="todo">Which features are working right now, and which are still planned?</p></dd></div>
+      <div class="step reveal"><dt><span>05</span>Challenges</dt>
+        <dd><p class="todo">What was hardest to build, or what broke along the way?</p></dd></div>
+      <div class="step reveal"><dt><span>06</span>What I learned</dt>
+        <dd><p class="todo">What do you know now that you didn't before starting?</p></dd></div>
+      <div class="step reveal"><dt><span>07</span>What's next</dt>
+        <dd><p class="todo">What are you building next for Focus Quest?</p></dd></div>
+    </dl>
+  </section>
+
+  <!-- 02 KiriShield -->
+  <section class="case" id="kirishield">
+    <header class="case__head">
+      <div class="case__meta"><span class="case__num">02</span><span class="badge badge--test">Tested</span></div>
+      <h2 class="reveal">KiriShield</h2>
+      <p class="case__hook reveal">An AI-powered Telegram bot that helps Cambodian elderly users spot scam messages and content that may be AI-generated.</p>
+      <ul class="tags"><li>Telegram bot</li><li>Google Gemini</li><li>API integration</li></ul>
+    </header>
+
+    <figure class="media reveal" data-label="assets/projects/kirishield.jpg">
+      <img src="assets/projects/kirishield.jpg" alt="KiriShield checking a message in Telegram">
+    </figure>
+
+    <dl class="steps">
+      <div class="step reveal"><dt><span>01</span>Problem</dt>
+        <dd><p>Scam messages, fake links and AI-generated videos and pictures are getting harder to tell apart from the real thing, and elderly people in Cambodia are often the ones targeted.</p>
+        <p class="todo">Did something specific make you start this? A family member, a story you heard?</p></dd></div>
+      <div class="step reveal"><dt><span>02</span>Idea</dt>
+        <dd><p>A bot you can forward something suspicious to (a text, a link, a video, a picture or a file) and get back a clear risk check.</p></dd></div>
+      <div class="step reveal"><dt><span>03</span>Design</dt>
+        <dd><p class="todo">Why Telegram? How did you design the replies so they're easy for older users to understand?</p></dd></div>
+      <div class="step reveal"><dt><span>04</span>Development</dt>
+        <dd><ul><li>Integrated Google's Gemini model to analyse messages</li><li>Built the API client integration</li><li>Fixed crashes caused by Telegram's entity parsing</li><li>Tested it against a range of real scam scenarios</li></ul>
+        <p class="mono" style="margin-top:12px">Test results: risk score per scenario</p>
+        <div class="results">
+          <div class="result"><span class="result__name">Lottery / prize scam</span><span class="result__score">~98%</span><span class="result__bar"><i style="--v:98%"></i></span></div>
+          <div class="result"><span class="result__name">Fake ABA Bank identity update</span><span class="result__score">~98%</span><span class="result__bar"><i style="--v:98%"></i></span></div>
+          <div class="result"><span class="result__name">E-commerce job scam</span><span class="result__score">~95%</span><span class="result__bar"><i style="--v:95%"></i></span></div>
+          <div class="result"><span class="result__name">Mobile top-up reward scam</span><span class="result__score">~95%</span><span class="result__bar"><i style="--v:95%"></i></span></div>
+          <div class="result"><span class="result__name">Legitimate family message</span><span class="result__score result__score--safe">0%</span><span class="result__bar"><i style="--v:0%"></i></span></div>
+        </div></dd></div>
+      <div class="step reveal"><dt><span>05</span>Challenges</dt>
+        <dd><p>Telegram's message formatting kept crashing the bot until the entity parsing was fixed. Phishing links were another one: the bot needed to read the link's domain properly before it could judge it, and that took some work to get right.</p>
+        <p class="todo">Anything else that was hard? Add or reword in your own voice.</p></dd></div>
+      <div class="step reveal"><dt><span>06</span>What I learned</dt>
+        <dd><p class="todo">What did building and testing KiriShield teach you?</p></dd></div>
+      <div class="step reveal"><dt><span>07</span>What's next</dt>
+        <dd><p class="todo">Plans for launching it or getting it to real users?</p></dd></div>
+    </dl>
+  </section>
+
+  <!-- 03 Twenty1 Studio -->
+  <section class="case" id="twenty1-studio">
+    <header class="case__head">
+      <div class="case__meta"><span class="case__num">03</span><span class="badge badge--shipped">Shipped</span></div>
+      <h2 class="reveal">Twenty1 Studio</h2>
+      <p class="case__hook reveal">A small online business I co-founded, selling squishies for kids.</p>
+      <ul class="tags"><li>Co-founder</li><li>Branding</li><li>Social media</li><li>Website</li></ul>
+    </header>
+
+    <figure class="media reveal" data-label="assets/projects/twenty1.jpg">
+      <img src="assets/projects/twenty1.jpg" alt="Twenty1 Studio branding and shop">
+    </figure>
+
+    <dl class="steps">
+      <div class="step reveal"><dt><span>01</span>Problem</dt>
+        <dd><p class="todo">What gap did you see? Why squishies, and why kids?</p></dd></div>
+      <div class="step reveal"><dt><span>02</span>Idea</dt>
+        <dd><p class="todo">How did you and your co-founders decide to start it?</p></dd></div>
+      <div class="step reveal"><dt><span>03</span>Design</dt>
+        <dd><p>I handled the branding and the social media.</p>
+        <p class="todo">What does the brand look like, and how did you come up with it?</p></dd></div>
+      <div class="step reveal"><dt><span>04</span>Development</dt>
+        <dd><p>I built the website people use to shop.</p>
+        <p class="todo">What did you build it with? Add a link if it's still up.</p></dd></div>
+      <div class="step reveal"><dt><span>05</span>Challenges</dt>
+        <dd><p class="todo">What was harder than expected about running a real business?</p></dd></div>
+      <div class="step reveal"><dt><span>06</span>What I learned</dt>
+        <dd><p class="todo">What did it teach you about business and entrepreneurship?</p></dd></div>
+      <div class="step reveal"><dt><span>07</span>What's next</dt>
+        <dd><p class="todo">Is it still running? What's next for it?</p></dd></div>
+    </dl>
+  </section>
+
+  <!-- 04 TechFoundation -->
+  <section class="case" id="techfoundation">
+    <header class="case__head">
+      <div class="case__meta"><span class="case__num">04</span><span class="badge badge--ongoing">Ongoing</span></div>
+      <h2 class="reveal">TechFoundation</h2>
+      <p class="case__hook reveal">Free weekly tech classes, co-founded with friends, to bring our elderly community back into the loop with the rest of us.</p>
+      <ul class="tags"><li>Co-founder</li><li>Canva</li><li>CapCut</li><li>AI tools</li><li>Digital security</li></ul>
+    </header>
+
+    <figure class="media reveal" data-label="assets/projects/techfoundation.jpg">
+      <img src="assets/projects/techfoundation.jpg" alt="A TechFoundation class">
+    </figure>
+
+    <dl class="steps">
+      <div class="step reveal"><dt><span>01</span>Problem</dt>
+        <dd><p>Technology moves fast, and a lot of older people in our community get left out of tools the rest of us use every day.</p></dd></div>
+      <div class="step reveal"><dt><span>02</span>Idea</dt>
+        <dd><p>A free digital literacy initiative covering Canva, CapCut, AI and staying safe online.</p></dd></div>
+      <div class="step reveal"><dt><span>03</span>Design</dt>
+        <dd><p>A weekly online class, plus tips-and-tricks posts, posters and videos shared between sessions.</p>
+        <p class="todo">How often do the tips posts go out? (Your notes say both "weekly" and "every other day".)</p></dd></div>
+      <div class="step reveal"><dt><span>04</span>Development</dt>
+        <dd><p class="todo">How did you find your first learners? How many people come?</p></dd></div>
+      <div class="step reveal"><dt><span>05</span>Challenges</dt>
+        <dd><p class="todo">What's hard about teaching tech to people who didn't grow up with it?</p></dd></div>
+      <div class="step reveal"><dt><span>06</span>What I learned</dt>
+        <dd><p class="todo">What have your learners taught you?</p></dd></div>
+      <div class="step reveal"><dt><span>07</span>What's next</dt>
+        <dd><p class="todo">Where do you want TechFoundation to go?</p></dd></div>
+    </dl>
+  </section>
+
+  <!-- 05 STUCO Opportunity Platform -->
+  <section class="case" id="stuco-platform">
+    <header class="case__head">
+      <div class="case__meta"><span class="case__num">05</span><span class="badge badge--concept">Concept · In Development</span></div>
+      <h2 class="reveal">STUCO Opportunity Platform</h2>
+      <p class="case__hook reveal">A digital platform for our school, putting events and opportunities in one place.</p>
+      <ul class="tags"><li>Concept</li><li>AI extraction</li><li>Admin approval</li></ul>
+    </header>
+
+    <dl class="steps">
+      <div class="step reveal"><dt><span>01</span>Problem</dt>
+        <dd><p class="todo">How do students find out about events and opportunities right now, and what's wrong with that?</p></dd></div>
+      <div class="step reveal"><dt><span>02</span>Idea</dt>
+        <dd><p>One platform with school events, an opportunity board, and a way for anyone to submit opportunities they find.</p></dd></div>
+      <div class="step reveal"><dt><span>03</span>Design</dt>
+        <dd><ul><li>School events calendar</li><li>Opportunity board and submissions</li><li>AI-assisted extraction and verification of submitted opportunities</li><li>Admin approval before anything goes live</li><li>Possible Gmail notifications and subscriptions</li></ul></dd></div>
+      <div class="step reveal"><dt><span>04</span>Development</dt>
+        <dd><p class="todo">What's built so far?</p></dd></div>
+      <div class="step reveal"><dt><span>05</span>Challenges</dt>
+        <dd><p class="todo">What's the hardest part of designing it?</p></dd></div>
+      <div class="step reveal"><dt><span>06</span>What I learned</dt>
+        <dd><p class="todo">What has planning it taught you so far?</p></dd></div>
+      <div class="step reveal"><dt><span>07</span>What's next</dt>
+        <dd><p class="todo">When do you hope to launch it?</p></dd></div>
+    </dl>
+  </section>
+
+  <!-- Lighter-weight work -->
+  <section>
+    <span class="pillar">Also</span>
+    <h2 class="section-label reveal">Also building and organizing</h2>
+    <ul class="also">
+      <li class="reveal" style="--i:0"><h3>Durian business content</h3><p>Creating and managing TikTok and Facebook content for my uncle's durian business.</p></li>
+      <li class="reveal" style="--i:1"><h3>Scientific Operation Club</h3><p>Event planner for CIA's Scientific Operation Club.</p></li>
+      <li class="reveal" style="--i:2"><h3>STEM Cambodia &amp; STEM Fair</h3><p>Took part in STEM Cambodia (2026) and our school STEM Fair.</p></li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="cta" id="contact">
+    <h2 class="reveal">Say <em>hi.</em></h2>
+    <div class="cta__links">
+      <!-- TODO: replace with your real email and links -->
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">TikTok</a>
+      <a href="#">Resume</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Kaknika Chea — built with more coffee than I'd like to admit.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
